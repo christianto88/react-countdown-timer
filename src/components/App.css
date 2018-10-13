@@ -1,12 +1,22 @@
 .App {
   text-align: center;
+  background-color: #0d47a1;
+  height:100vh;
+  position: relative
 }
-
+.Mid{
+top:25vh;
+left:25vw;
+height: 50vh;
+width: 50vw;
+background-color: #5472d3;
+position: absolute;
+border-radius: 20px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
