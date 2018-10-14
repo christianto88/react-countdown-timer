@@ -41,14 +41,12 @@ import React from "react";
 //     );
 //   }
 // }
-const countdownDisplay = ({ message, time }) => {
-  console.log("render time", time);
+const countdownDisplay = ({ message, secondsLeft, timer }) => {
+  console.log("render time", secondsLeft);
+  if (secondsLeft === 0) clearInterval(timer);
   return (
-    <div
-      key={time}
-      style={{ backgroundColor: "#FFFFFF", margin: "0 20px 0 20px" }}
-    >
-      <span>{message ? message : "Time left: " + time}</span>
+    <div style={{ backgroundColor: "#FFFFFF", margin: "0 20px 0 20px" }}>
+      <span>{message ? message : "Time left: " + secondsLeft}</span>
     </div>
   );
 };

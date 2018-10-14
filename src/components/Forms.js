@@ -19,9 +19,8 @@ class Forms extends Component {
   };
   startCountdown = () => {
     console.log("start countdown");
-    let { setTime, setMsg } = this.props;
-    console.log("st", this.validateInput(this.state.start));
-    console.log("end", this.validateInput(this.state.end));
+    let { setTime, setMsg, timer, setTimer } = this.props;
+    clearInterval(timer);
     if (
       this.validateInput(this.state.start) &&
       this.validateInput(this.state.end)
@@ -42,14 +41,16 @@ class Forms extends Component {
         let time = endSec - startSec;
         setMsg("");
         setTime(time);
-        console.log("setInterval");
-        setInterval(
+        let newTimer = setInterval(
           () => {
-            time >= 0 ? setTime(time--) : clearInterval();
+            console.log("time", time);
+            setTime(time--);
           },
           1000,
           time
         );
+        console.log("newTimer", newTimer);
+        setTimer(newTimer);
       }
     } else {
       setMsg("Please check your time format");
