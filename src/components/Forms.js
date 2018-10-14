@@ -18,7 +18,6 @@ class Forms extends Component {
     return regex.test(input);
   };
   startCountdown = () => {
-    console.log("start countdown");
     let { setTime, setMsg, timer, setTimer } = this.props;
     clearInterval(timer);
     if (
@@ -43,13 +42,11 @@ class Forms extends Component {
         setTime(time);
         let newTimer = setInterval(
           () => {
-            console.log("time", time);
-            setTime(time--);
+            setTime(--time);
           },
           1000,
           time
         );
-        console.log("newTimer", newTimer);
         setTimer(newTimer);
       }
     } else {

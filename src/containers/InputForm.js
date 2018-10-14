@@ -2,7 +2,6 @@ import Forms from "../components/Forms";
 import { connect } from "react-redux";
 import { setMessage, setTimer, setTime } from "../actions";
 const mapStateToProps = state => {
-  // console.log("input form state", state);
   return { secondsLeft: state.timer.secondsLeft, timer: state.timer.timer };
 };
 const mapDispatchToProps = dispatch => {
