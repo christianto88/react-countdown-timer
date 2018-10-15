@@ -15,6 +15,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://christianto88.github.io/react-countdown-timer/",
   "eslintConfig": {
     "extends": "react-app"
   },
